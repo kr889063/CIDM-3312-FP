@@ -1,0 +1,9 @@
+C:\Users\Kevin\Documents\Final Project\VATSIMData\library\bin\Debug\netstandard2.0\library.deps.json
+C:\Users\Kevin\Documents\Final Project\VATSIMData\library\bin\Debug\netstandard2.0\library.dll
+C:\Users\Kevin\Documents\Final Project\VATSIMData\library\bin\Debug\netstandard2.0\library.pdb
+C:\Users\Kevin\Documents\Final Project\VATSIMData\library\obj\Debug\netstandard2.0\library.csprojAssemblyReference.cache
+C:\Users\Kevin\Documents\Final Project\VATSIMData\library\obj\Debug\netstandard2.0\library.AssemblyInfoInputs.cache
+C:\Users\Kevin\Documents\Final Project\VATSIMData\library\obj\Debug\netstandard2.0\library.AssemblyInfo.cs
+C:\Users\Kevin\Documents\Final Project\VATSIMData\library\obj\Debug\netstandard2.0\library.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\Final Project\VATSIMData\library\obj\Debug\netstandard2.0\library.dll
+C:\Users\Kevin\Documents\Final Project\VATSIMData\library\obj\Debug\netstandard2.0\library.pdb

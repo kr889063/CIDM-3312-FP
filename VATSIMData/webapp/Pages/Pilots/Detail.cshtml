@@ -1,0 +1,171 @@
+@page
+@model PilotDetailModel
+@{ 
+    Layout = null;
+    /* Borrowing from this: https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/sort-filter-page?view=aspnetcore-3.1 */
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="/lib/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>Pilot Details</h1>
+        <table class="table table-sm table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Cid
+                    </th>
+                    <th>
+                        Real Name
+                    </th>
+                    <th>
+                        Callsign
+                    </th>
+                    <th>
+                        Time of Logon
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Model.Pilot.Cid
+                    </td>
+                    <td>
+                        @Model.Pilot.Realname
+                    </td>
+                    <td>
+                        @Model.Pilot.Callsign
+                    </td>
+                    <td>
+                        @Model.Pilot.TimeLogon
+                    </td>
+                </tr>
+            </tbody>
+                
+        </table>
+        <table class="table table-sm table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Latitude
+                    </th>
+                    <th>
+                        Longitude
+                    </th>
+                    <th>
+                        Time Last ATIS Received
+                    </th>
+                    <th>
+                        Altitude
+                    </th>
+                    <th>
+                        Ground Speed
+                    </th>
+                    <th>
+                        Transponder
+                    </th>
+                    <th>
+                        Heading
+                    </th>
+                    <th>
+                        QNH_iHg
+                    </th>
+                    <th>
+                        QNH_Mb
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var position in Model.Positions)
+                {
+                    <tr>
+                        <td>
+                            @position.Latitude
+                        </td>
+                        <td>
+                            @position.Longitude
+                        </td>
+                        <td>
+                            @position.TimeLastAtisReceived
+                        </td>
+                        <td>
+                            @position.Altitude
+                        </td>
+                        <td>
+                            @position.Groundspeed
+                        </td>
+                        <td>
+                            @position.Transponder
+                        </td>
+                        <td>
+                            @position.Heading
+                        </td>
+                        <td>
+                            @position.QNH_iHg
+                        </td>
+                        <td>
+                            @position.QNH_Mb
+                        </td>
+                        
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <table class="table table-sm table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="2">
+                        Detials about the flight
+                    </th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Top Speed:
+                    </td>
+                    <td>
+                        @Model.topSpeed
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Highest Altitude:
+                    </td>
+                    <td>
+                        @Model.highestAltitude
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Farthest East:
+                    </td>
+                    <td>
+                        @Model.farthestEast
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Farthest South:
+                    </td>
+                    <td>
+                        @Model.farthestSouth
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <a asp-page="/Pilots/Search">
+                Back to Pilot Search
+            </a>
+        </p>
+    </div>
+</body>
+</html>
